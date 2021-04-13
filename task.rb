@@ -152,17 +152,30 @@ end
 
 class UserQ17
   # 以下に回答を記載
+  attr_accessor :name
+  attr_accessor :age
+  attr_accessor :gender
+
+ def initialize(name:,age:,gender:)
+    self.name = name
+    self.age = age
+    self.gender = gender
+ end
+
+ def info
+   return "名前：#{self.name}\n年齢：#{self.age}\n性別：#{self.gender}"
+ end
 
 end
 
 def q17
   # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
   user1 = UserQ17.new(name: "神里", age: 32, gender: "男")
-  user2 = UserQ17.new(name: "あじー", age: 32, gender: "男")
+  user2 = UserQ17.new(name: "ゆき", age: 32, gender: "女")
 
-  user1.info
+  puts user1.info
   puts "-------------"
-  user2.info
+  puts user2.info
 end
 
 class UserQ18
