@@ -152,21 +152,18 @@ end
 
 class UserQ17
   # 以下に回答を記載
-  attr_accessor :name
-  attr_accessor :age
-  attr_accessor :gender
 
  def initialize(name:,age:,gender:)
-    self.name = name
-    self.age = age
-    self.gender = gender
+    ＠name = name
+    ＠age = age
+    ＠gender = gender
  end
-
- def info
-   return "名前：#{self.name}\n年齢：#{self.age}\n性別：#{self.gender}"
- end
-
 end
+ puts <<~TEXT
+  名前：#{@name}
+  年齢：#{@age}
+  性別：#{@gender}
+TEXT
 
 def q17
   # ここは変更しないで下さい（ユーザー情報は変更していただいてOKです）
